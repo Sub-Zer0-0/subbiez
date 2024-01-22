@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego MOC Showcase</title>
+</head>
+<body>
+
+    <h1>SUBBIEZ</h1>
+
+    <form action="#" method="get" id="searchForm">
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search" placeholder="Enter MOC ID">
+        <input type="submit" value="Search">
+    </form>
+
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const searchTerm = document.getElementById("search").value;
+            
+            // Check if the search term matches the specified entry
+            if (searchTerm === "E001_1_ELC_FACILITY_21012024") {
+                window.location.href = "https://www.bricklink.com/v3/studio/design.page?idModel=510571";
+            } else {
+                alert("MOC not found. Please try another search term.");
+            }
+        });
+    </script>
+
+</body>
+</html>
